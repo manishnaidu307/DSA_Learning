@@ -38,6 +38,4 @@ public class MaxAndMin {
         System.out.println("Max Frequency: "+ maxEle + " " + maxFreq);
         System.out.println("Min Frequency: "+ minEle + " "+ minFreq);
     }
-    
-
 }
