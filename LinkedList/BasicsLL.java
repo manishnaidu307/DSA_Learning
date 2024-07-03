@@ -16,8 +16,8 @@ public class BasicsLL {
         int [] arr = {2,3,6,12,4};
         Node head = ConverLL(arr);
         PrintLL(head);
-        if(SearchLL(head, 12)== true) 
-        System.out.println("Value present in the Linked List. ");
+        if((SearchLL(head, 12))== true) 
+        System.out.println("\npresent in the Linked List. ");
         else System.out.println("Element not present in the LL.");
     }
     public static Node ConverLL(int [] arr){
@@ -40,7 +40,7 @@ public class BasicsLL {
     }
     public static boolean SearchLL(Node head, int val){
         Node temp = head;
-        while(temp!= head){
+        while(temp!= null){
             if(temp.data == val) return true;
             temp = temp.next;
         }
