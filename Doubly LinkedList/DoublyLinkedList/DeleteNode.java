@@ -19,7 +19,7 @@ public class DeleteNode {
     public static void main(String[] args) {
         int arr [] = {1,3,4,5,6};
         Node head = array2DLL(arr);
-        // head = deleteHead(head);
+        head = deleteHead(head);
         printNodes(head);
     
     }
@@ -48,54 +48,54 @@ public class DeleteNode {
         prev.next = null;
         return head;
     }
-    private static Node removeKElement(Node head, int k){
-        if(k == 1) return null;
-        int cnt = 0;
-        Node knode = head;
-        while(knode != null){
-            cnt++;
-            if(cnt == k) break;
-            knode = knode.next;
-        }
-        Node prev = knode.back;
-        Node front = knode.next;
-        if(prev == null && front == null) return null;
-        else if (prev == null) return deleteHead(head);
-        else if(front == null) return deleteTail(head);
-        prev.next = front;
-        front.back = prev;
-        knode.back = null;
-        knode.next = null;
-        return head;
-    }
-    private static Node deleteTail(Node head) {
-        if (head == null || head.next == null) {
-            return null; // Return null if the list is empty or contains only one element
-        }
+    // private static Node removeKElement(Node head, int k){
+    //     if(k == 1) return null;
+    //     int cnt = 0;
+    //     Node knode = head;
+    //     while(knode != null){
+    //         cnt++;
+    //         if(cnt == k) break;
+    //         knode = knode.next;
+    //     }
+    //     Node prev = knode.back;
+    //     Node front = knode.next;
+    //     if(prev == null && front == null) return null;
+    //     else if (prev == null) return deleteHead(head);
+    //     else if(front == null) return deleteTail(head);
+    //     prev.next = front;
+    //     front.back = prev;
+    //     knode.back = null;
+    //     knode.next = null;
+    //     return head;
+    // }
+    // private static Node deleteTail(Node head) {
+    //     if (head == null || head.next == null) {
+    //         return null; // Return null if the list is empty or contains only one element
+    //     }
             
-        Node tail = head;
-        while (tail.next != null) {
-                tail = tail.next;
-        }
+    //     Node tail = head;
+    //     while (tail.next != null) {
+    //             tail = tail.next;
+    //     }
             
-        Node newtail = tail.back;
+    //     Node newtail = tail.back;
             
-        newtail.next = null;
-        tail.back = null;
+    //     newtail.next = null;
+    //     tail.back = null;
             
-        return head;
-    }
-    @SuppressWarnings("null")
-    private static void deleteGivenNode(Node temp){
-        Node prev = temp.back;
-        Node front = temp.next;
-        if(front == null){
-            prev.next = null;
-            front.back = null;
-            return;
-        }
-        prev.next = front;
-        temp.back = prev;
-        temp.next = temp.back= null;
-    }
+    //     return head;
+    // }
+    // @SuppressWarnings("null")
+    // private static void deleteGivenNode(Node temp){
+    //     Node prev = temp.back;
+    //     Node front = temp.next;
+    //     if(front == null){
+    //         prev.next = null;
+    //         front.back = null;
+    //         return;
+    //     }
+    //     prev.next = front;
+    //     temp.back = prev;
+    //     temp.next = temp.back= null;
+    // }
 }
