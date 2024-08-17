@@ -1,6 +1,8 @@
 package Heaps;
 
 public class insertDeleteHeap {
+
+    //Min Heap insert, Delete and Heapify 
     
     private int [] Heap;
     private int maxSize;
